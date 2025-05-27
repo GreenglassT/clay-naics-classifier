@@ -19,7 +19,7 @@ logger = logging.getLogger(__name__)
 
 # Configuration
 OPENAI_API_KEY = os.getenv('OPENAI_API_KEY')
-ASSISTANT_ID = os.getenv('ASSISTANT_ID') 
+ASSISTANT_ID = os.getenv('ASSISTANT_ID')
 SERPAPI_KEY = os.getenv('SERPAPI_KEY')
 
 # Validate environment variables
@@ -133,7 +133,7 @@ def wait_for_completion(thread_id, run_id, max_wait=180):
 def parse_classification_response(classification):
     """Extract structured data from AI response"""
     naics_code = "Not determined"
-    naics_title = "Not determined"  
+    naics_title = "Not determined"
     confidence_level = "Unknown"
     
     # Extract NAICS code (6-digit number)
@@ -179,8 +179,19 @@ def parse_classification_response(classification):
             cleaned_title = re.sub(r'^(?:the\s+|a\s+|an\s+)', '', cleaned_title, flags=re.IGNORECASE)
             
             # Remove trailing explanatory text
-            cleaned_title = re.sub(r',.*
-
+            cleaned_title = re.sub(r',.*$', '', cleaned_title)  # Remove everything after comma
+            cleaned_title = re.sub(r'\s+is\s+.*$', '', cleaned_title, flags=re.IGNORECASE)  # Remove "is the most..."
+            cleaned_title = re.sub(r'\s+which\s+.*$', '', cleaned_title, flags=re.IGNORECASE)  # Remove "which..."
+            
+            # Final cleanup
+            cleaned_title = cleaned_title.strip()
+            
+            if len(cleaned_title) > 5 and cleaned_title != "Not determined":  # Basic validation
+                naics_title = cleaned_title
+                break
+    
+    return naics_code, naics_title, confidence_level
+    
 @app.route('/classify-business', methods=['POST'])
 def classify_business():
     """Main Clay.com endpoint - returns structured JSON"""
@@ -392,7 +403,7 @@ Format your response clearly with the above structure.
             'search_results_count': search_results_found,
             'knowledge_graph_found': knowledge_graph_found,
             'data_sources_used': len([
-                s for s in [website_content, search_results] 
+                s for s in [website_content, search_results]
                 if s and (isinstance(s, str) and 'error' not in s.lower() or isinstance(s, list) and len(s) > 0)
             ]),
             
@@ -715,7 +726,7 @@ Format your response clearly with the above structure.
             'search_results_count': search_results_found,
             'knowledge_graph_found': knowledge_graph_found,
             'data_sources_used': len([
-                s for s in [website_content, search_results] 
+                s for s in [website_content, search_results]
                 if s and (isinstance(s, str) and 'error' not in s.lower() or isinstance(s, list) and len(s) > 0)
             ]),
             
@@ -1038,7 +1049,7 @@ Format your response clearly with the above structure.
             'search_results_count': search_results_found,
             'knowledge_graph_found': knowledge_graph_found,
             'data_sources_used': len([
-                s for s in [website_content, search_results] 
+                s for s in [website_content, search_results]
                 if s and (isinstance(s, str) and 'error' not in s.lower() or isinstance(s, list) and len(s) > 0)
             ]),
             
@@ -1369,7 +1380,7 @@ Format your response clearly with the above structure.
             'search_results_count': search_results_found,
             'knowledge_graph_found': knowledge_graph_found,
             'data_sources_used': len([
-                s for s in [website_content, search_results] 
+                s for s in [website_content, search_results]
                 if s and (isinstance(s, str) and 'error' not in s.lower() or isinstance(s, list) and len(s) > 0)
             ]),
             
