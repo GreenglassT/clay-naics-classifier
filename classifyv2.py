@@ -512,7 +512,7 @@ if __name__ == '__main__':
     print("✅ Consistent error handling")
     print("=" * 50)
     
-    app.run(host='0.0.0.0', port=5000, debug=True), '', cleaned_title)  # Remove everything after comma
+    app.run(host='0.0.0.0', port=6000, debug=True), '', cleaned_title)  # Remove everything after comma
             cleaned_title = re.sub(r'\s+is\s+.*
 
 @app.route('/classify-business', methods=['POST'])
@@ -835,7 +835,7 @@ if __name__ == '__main__':
     print("✅ Consistent error handling")
     print("=" * 50)
     
-    app.run(host='0.0.0.0', port=5000, debug=True), '', cleaned_title, flags=re.IGNORECASE)  # Remove "is the most..."
+    app.run(host='0.0.0.0', port=6000, debug=True), '', cleaned_title, flags=re.IGNORECASE)  # Remove "is the most..."
             cleaned_title = re.sub(r'\s+which\s+.*
 
 @app.route('/classify-business', methods=['POST'])
@@ -1158,7 +1158,7 @@ if __name__ == '__main__':
     print("✅ Consistent error handling")
     print("=" * 50)
     
-    app.run(host='0.0.0.0', port=5000, debug=True), '', cleaned_title, flags=re.IGNORECASE)  # Remove "which..."
+    app.run(host='0.0.0.0', port=6000, debug=True), '', cleaned_title, flags=re.IGNORECASE)  # Remove "which..."
             
             # Final cleanup
             cleaned_title = cleaned_title.strip()
