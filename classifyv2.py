@@ -7,6 +7,8 @@ from openai import OpenAI
 from dotenv import load_dotenv
 import logging
 import re
+import csv
+import os
 
 # Load environment variables
 load_dotenv()
@@ -22,104 +24,145 @@ OPENAI_API_KEY = os.getenv('OPENAI_API_KEY')
 ASSISTANT_ID = os.getenv('ASSISTANT_ID')
 SERPAPI_KEY = os.getenv('SERPAPI_KEY')
 
-# ICP Configuration - Define your target industries
-ICP_NAICS_CODES = {
-    # Technology & Software
-    "541511": {"title": "Custom Computer Programming Services", "priority": "High", "reason": "Heavy technology adoption"},
-    "541512": {"title": "Computer Systems Design Services", "priority": "High", "reason": "Technology-focused business model"},
-    "518210": {"title": "Data Processing, Hosting, and Related Services", "priority": "High", "reason": "Cloud infrastructure needs"},
+class ICPManager:
+    def __init__(self, csv_path: str = "icp_naics_codes.csv"):
+        self.csv_path = csv_path
+        self.icp_data = {}
+        self.load_icp_data()
     
-    # Professional Services
-    "541110": {"title": "Offices of Lawyers", "priority": "Medium", "reason": "Regular technology upgrades"},
-    "541211": {"title": "Offices of Certified Public Accountants", "priority": "Medium", "reason": "Compliance software needs"},
-    "541611": {"title": "Administrative Management and General Management Consulting Services", "priority": "High", "reason": "Digital transformation focus"},
+    def load_icp_data(self):
+        """Load ICP data from simplified CSV file"""
+        try:
+            if os.path.exists(self.csv_path):
+                with open(self.csv_path, 'r', newline='', encoding='utf-8') as csvfile:
+                    reader = csv.DictReader(csvfile)
+                    
+                    for row in reader:
+                        naics_code = str(row['naics_code']).strip()
+                        self.icp_data[naics_code] = {
+                            'title': row['naics_title'].strip(),
+                            'priority': row['priority'].strip()
+                        }
+                
+                logger.info(f"Loaded {len(self.icp_data)} NAICS codes from {self.csv_path}")
+            else:
+                logger.warning(f"ICP CSV file not found: {self.csv_path}")
+                self.create_sample_csv()
+        except Exception as e:
+            logger.error(f"Error loading ICP data: {e}")
+            self.icp_data = {}
     
-    # Healthcare
-    "621111": {"title": "Offices of Physicians (except Mental Health)", "priority": "Medium", "reason": "EMR and patient management systems"},
-    "621210": {"title": "Offices of Dentists", "priority": "Low", "reason": "Limited tech adoption"},
+    def create_sample_csv(self):
+        """Create a sample CSV file if none exists"""
+        sample_data = [
+            ['naics_code', 'naics_title', 'priority'],
+            ['541511', 'Custom Computer Programming Services', 'High'],
+            ['541512', 'Computer Systems Design Services', 'High'],
+            ['621111', 'Offices of Physicians', 'Medium'],
+            ['722513', 'Limited-Service Restaurants', 'Exclude'],
+        ]
+        
+        try:
+            with open(self.csv_path, 'w', newline='', encoding='utf-8') as csvfile:
+                writer = csv.writer(csvfile)
+                writer.writerows(sample_data)
+            
+            logger.info(f"Created sample ICP CSV file: {self.csv_path}")
+            self.load_icp_data()  # Reload the data
+        except Exception as e:
+            logger.error(f"Error creating sample CSV: {e}")
     
-    # Manufacturing (exclude)
-    "311": {"title": "Food Manufacturing", "priority": "Exclude", "reason": "Outside our expertise"},
-    "312": {"title": "Beverage and Tobacco Product Manufacturing", "priority": "Exclude", "reason": "Regulatory complexity"},
-    
-    # Construction (exclude most)
-    "236": {"title": "Construction of Buildings", "priority": "Exclude", "reason": "Low technology adoption"},
-    "238220": {"title": "Plumbing, Heating, and Air-Conditioning Contractors", "priority": "Low", "reason": "Limited software needs"},
-}
-
-# ICP Qualification function
-def qualify_against_icp(naics_code, naics_title):
-    """
-    Qualify business against ICP criteria
-    Returns qualification status and reasoning
-    """
-    qualification = {
-        'is_icp_match': False,
-        'priority_level': 'Unknown',
-        'qualification_reason': 'No ICP data available',
-        'icp_category': 'Unqualified'
-    }
-    
-    if not naics_code or naics_code == "Not determined":
-        qualification.update({
-            'qualification_reason': 'NAICS code not determined',
+    def get_qualification(self, naics_code: str, naics_title: str = "") -> dict:
+        """Get ICP qualification for a NAICS code"""
+        qualification = {
+            'is_icp_match': False,
+            'priority_level': 'Not Qualified',
+            'qualification_reason': 'No ICP data available',
             'icp_category': 'Unqualified'
-        })
-        return qualification
-    
-    # Direct code match
-    if naics_code in ICP_NAICS_CODES:
-        icp_data = ICP_NAICS_CODES[naics_code]
-        qualification.update({
-            'is_icp_match': True,
-            'priority_level': icp_data['priority'],
-            'qualification_reason': icp_data['reason'],
-            'icp_category': 'Direct Match'
-        })
-        return qualification
-    
-    # Check for partial matches (first 3 digits for industry group)
-    industry_group = naics_code[:3]
-    for code, data in ICP_NAICS_CODES.items():
-        if code.startswith(industry_group) or industry_group == code:
+        }
+        
+        if not naics_code or naics_code == "Not determined":
             qualification.update({
-                'is_icp_match': True,
-                'priority_level': data['priority'],
-                'qualification_reason': f"Industry group match: {data['reason']}",
-                'icp_category': 'Industry Group Match'
+                'qualification_reason': 'NAICS code not determined',
+                'icp_category': 'Unqualified'
             })
             return qualification
+        
+        # Direct code match (exact)
+        if naics_code in self.icp_data:
+            icp_info = self.icp_data[naics_code]
+            qualification.update({
+                'is_icp_match': icp_info['priority'] != 'Exclude',
+                'priority_level': icp_info['priority'],
+                'qualification_reason': f"Direct match in ICP database",
+                'icp_category': f"Direct Match"
+            })
+            return qualification
+        
+        # Industry group match (partial codes)
+        for code_length in [5, 4, 3, 2]:  # Try different lengths
+            if len(naics_code) >= code_length:
+                partial_code = naics_code[:code_length]
+                for stored_code, icp_info in self.icp_data.items():
+                    if stored_code == partial_code:
+                        qualification.update({
+                            'is_icp_match': icp_info['priority'] != 'Exclude',
+                            'priority_level': icp_info['priority'],
+                            'qualification_reason': f"Industry group match ({code_length}-digit)",
+                            'icp_category': f"Group Match"
+                        })
+                        return qualification
+        
+        # Keyword matching in title as fallback
+        if naics_title and naics_title != "Not determined":
+            title_lower = naics_title.lower()
+            keyword_priorities = {
+                'High': ['software', 'technology', 'cloud', 'digital', 'saas', 'data', 'analytics'],
+                'Medium': ['professional', 'consulting', 'legal', 'accounting', 'healthcare', 'medical'],
+                'Low': ['services', 'management', 'administrative'],
+                'Exclude': ['retail', 'restaurant', 'manufacturing', 'construction']
+            }
+            
+            for priority, keywords in keyword_priorities.items():
+                for keyword in keywords:
+                    if keyword in title_lower:
+                        qualification.update({
+                            'is_icp_match': priority != 'Exclude',
+                            'priority_level': priority,
+                            'qualification_reason': f"Keyword match: '{keyword}' in title",
+                            'icp_category': 'Keyword Match'
+                        })
+                        return qualification
+        
+        # Default: Not qualified
+        qualification.update({
+            'is_icp_match': False,
+            'priority_level': 'Not Qualified',
+            'qualification_reason': 'Does not match ICP criteria',
+            'icp_category': 'Outside ICP'
+        })
+        return qualification
     
-    # Check for keyword matches in title
-    icp_keywords = {
-        'High': ['software', 'technology', 'consulting', 'digital', 'cloud', 'saas'],
-        'Medium': ['professional', 'services', 'legal', 'accounting', 'healthcare'],
-        'Low': ['retail', 'restaurant', 'construction', 'manufacturing'],
-        'Exclude': ['agriculture', 'mining', 'utilities', 'government']
-    }
-    
-    if naics_title and naics_title != "Not determined":
-        title_lower = naics_title.lower()
-        for priority, keywords in icp_keywords.items():
-            for keyword in keywords:
-                if keyword in title_lower:
-                    qualification.update({
-                        'is_icp_match': priority != 'Exclude',
-                        'priority_level': priority,
-                        'qualification_reason': f"Keyword match: '{keyword}' in business title",
-                        'icp_category': 'Keyword Match'
-                    })
-                    return qualification
-    
-    # Default: Not in ICP
-    qualification.update({
-        'is_icp_match': False,
-        'priority_level': 'Not Qualified',
-        'qualification_reason': 'Business does not match ICP criteria',
-        'icp_category': 'Outside ICP'
-    })
-    
-    return qualification
+    def get_stats(self) -> dict:
+        """Get statistics about ICP configuration"""
+        if not self.icp_data:
+            return {'total': 0, 'by_priority': {}}
+        
+        stats = {'total': len(self.icp_data), 'by_priority': {}}
+        
+        for code_info in self.icp_data.values():
+            priority = code_info['priority']
+            stats['by_priority'][priority] = stats['by_priority'].get(priority, 0) + 1
+        
+        return stats
+
+# Initialize ICP Manager globally
+icp_manager = ICPManager("/Users/trent/OpenAI Webhook/icp_naics_codes.csv")
+
+# NEW: Update the qualify_against_icp function
+def qualify_against_icp(naics_code, naics_title):
+    """Qualify business against ICP using CSV data"""
+    return icp_manager.get_qualification(naics_code, naics_title)
 
 # Validate environment variables
 if not all([OPENAI_API_KEY, ASSISTANT_ID, SERPAPI_KEY]):
@@ -600,36 +643,54 @@ def test():
 
 @app.route('/icp-config', methods=['GET'])
 def get_icp_config():
-    """View current ICP configuration"""
+    """View current ICP configuration stats"""
+    stats = icp_manager.get_stats()
     return jsonify({
-        'icp_naics_codes': ICP_NAICS_CODES,
-        'total_codes': len(ICP_NAICS_CODES),
-        'priority_breakdown': {
-            'High': len([c for c in ICP_NAICS_CODES.values() if c['priority'] == 'High']),
-            'Medium': len([c for c in ICP_NAICS_CODES.values() if c['priority'] == 'Medium']),
-            'Low': len([c for c in ICP_NAICS_CODES.values() if c['priority'] == 'Low']),
-            'Exclude': len([c for c in ICP_NAICS_CODES.values() if c['priority'] == 'Exclude'])
-        }
+        'icp_stats': stats,
+        'csv_file': icp_manager.csv_path,
+        'total_codes': stats['total']
     })
 
-@app.route('/test-icp', methods=['POST'])
-def test_icp_qualification():
-    """Test ICP qualification for a specific NAICS code"""
+@app.route('/icp-reload', methods=['POST'])
+def reload_icp_config():
+    """Reload ICP configuration from CSV"""
+    try:
+        icp_manager.load_icp_data()
+        stats = icp_manager.get_stats()
+        return jsonify({
+            'success': True,
+            'message': 'ICP configuration reloaded successfully',
+            'stats': stats
+        })
+    except Exception as e:
+        return jsonify({
+            'success': False,
+            'error': str(e)
+        }), 500
+        
+@app.route('/icp-search', methods=['POST'])
+def search_icp_codes():
+    """Search ICP codes by keyword"""
     data = request.json
-    naics_code = data.get('naics_code', '')
-    naics_title = data.get('naics_title', '')
+    keyword = data.get('keyword', '').lower()
     
-    if not naics_code:
-        return jsonify({'error': 'naics_code required'}), 400
+    if not keyword:
+        return jsonify({'error': 'keyword required'}), 400
     
-    qualification = qualify_against_icp(naics_code, naics_title)
+    matches = []
+    for code, info in icp_manager.icp_data.items():
+        if (keyword in info['title'].lower() or
+            keyword in info['priority'].lower()):
+            matches.append({
+                'naics_code': code,
+                'naics_title': info['title'],
+                'priority': info['priority']
+            })
     
     return jsonify({
-        'input': {'naics_code': naics_code, 'naics_title': naics_title},
-        'qualification': qualification,
-        'lead_score': 'Hot' if qualification['priority_level'] == 'High' else
-                     'Warm' if qualification['priority_level'] == 'Medium' else
-                     'Cold' if qualification['priority_level'] == 'Low' else 'Disqualified'
+        'keyword': keyword,
+        'matches': matches,
+        'count': len(matches)
     })
 
 @app.route('/endpoints', methods=['GET'])
@@ -651,7 +712,8 @@ if __name__ == '__main__':
     print("- GET  /health (health check)")
     print("- POST /test (testing)")
     print("- GET  /icp-config (view ICP settings)")
-    print("- POST /test-icp (test ICP qualification)")
+    print("- POST /icp-reload (reload ICP from CSV)")
+    print("- POST /icp-search (search ICP codes)")
     print("- GET  /endpoints (list all endpoints)")
     print("=" * 50)
     print(f"OpenAI API: {'✅ Configured' if OPENAI_API_KEY else '❌ Missing'}")
@@ -659,13 +721,12 @@ if __name__ == '__main__':
     print(f"SERPAPI Key: {'✅ Configured' if SERPAPI_KEY else '❌ Missing'}")
     print("=" * 50)
     print("ICP Configuration:")
-    priority_counts = {}
-    for code_data in ICP_NAICS_CODES.values():
-        priority = code_data['priority']
-        priority_counts[priority] = priority_counts.get(priority, 0) + 1
-    
-    for priority, count in priority_counts.items():
-        print(f"  {priority}: {count} codes")
+    stats = icp_manager.get_stats()
+    if stats['by_priority']:
+        for priority, count in stats['by_priority'].items():
+            print(f"  {priority}: {count} codes")
+    else:
+        print("  No ICP configuration loaded - check CSV file")
     print("=" * 50)
     print("New features:")
     print("✅ Structured JSON responses for Clay")
@@ -674,6 +735,7 @@ if __name__ == '__main__':
     print("✅ Clean NAICS titles (no extra text)")
     print("✅ Confidence level extraction")
     print("✅ ICP qualification and lead scoring")
+    print("✅ CSV-based ICP management (no pandas required)")
     print("✅ Priority-based lead qualification")
     print("✅ Consistent error handling")
     print("=" * 50)
