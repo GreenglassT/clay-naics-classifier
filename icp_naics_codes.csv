@@ -1,0 +1,1013 @@
+naics_code,naics_title,priority
+111110,Soybean Farming,Exclude
+111120,Oilseed (except Soybean) Farming,Exclude
+111130,Dry Pea and Bean Farming,Exclude
+111140,Wheat Farming,Exclude
+111150,Corn Farming,Exclude
+111160,Rice Farming,Exclude
+111191,Oilseed and Grain Combination Farming,Exclude
+111199,All Other Grain Farming,Exclude
+111211,Potato Farming,Exclude
+111219,Other Vegetable (except Potato) and Melon Farming,Exclude
+111310,Orange Groves,Exclude
+111320,Citrus (except Orange) Groves,Exclude
+111331,Apple Orchards,Exclude
+111332,Grape Vineyards,Exclude
+111333,Strawberry Farming,Exclude
+111334,Berry (except Strawberry) Farming,Exclude
+111335,Tree Nut Farming,Exclude
+111336,Fruit and Tree Nut Combination Farming,Exclude
+111339,Other Noncitrus Fruit Farming,Exclude
+111411,Mushroom Production,Exclude
+111419,Other Food Crops Grown Under Cover,Exclude
+111421,Nursery and Tree Production,Exclude
+111422,Floriculture Production,Exclude
+111910,Tobacco Farming,Exclude
+111920,Cotton Farming,Exclude
+111930,Sugarcane Farming,Exclude
+111940,Hay Farming,Exclude
+111991,Sugar Beet Farming,Exclude
+111992,Peanut Farming,Exclude
+111998,All Other Miscellaneous Crop Farming,Exclude
+112111,Beef Cattle Ranching and Farming,Exclude
+112112,Cattle Feedlots,Exclude
+112120,Dairy Cattle and Milk Production,Exclude
+112130,Dual-Purpose Cattle Ranching and Farming,Exclude
+112210,Hog and Pig Farming,Exclude
+112310,Chicken Egg Production,Exclude
+112320,Broilers and Other Meat Type Chicken Production,Exclude
+112330,Turkey Production,Exclude
+112340,Poultry Hatcheries,Exclude
+112390,Other Poultry Production,Exclude
+112410,Sheep Farming,Exclude
+112420,Goat Farming,Exclude
+112511,Finfish Farming and Fish Hatcheries,Exclude
+112512,Shellfish Farming,Exclude
+112519,Other Aquaculture,Exclude
+112910,Apiculture,Exclude
+112920,Horses and Other Equine Production,Exclude
+112930,Fur-Bearing Animal and Rabbit Production,Exclude
+112990,All Other Animal Production,Exclude
+113110,Timber Tract Operations,Exclude
+113210,Forest Nurseries and Gathering of Forest Products,Exclude
+113310,Logging,Exclude
+114111,Finfish Fishing,Exclude
+114112,Shellfish Fishing,Exclude
+114119,Other Marine Fishing,Exclude
+114210,Hunting and Trapping,Exclude
+115111,Cotton Ginning,Exclude
+115112,"Soil Preparation, Planting, and Cultivating",Exclude
+115113,"Crop Harvesting, Primarily by Machine",Exclude
+115114,Postharvest Crop Activities (except Cotton Ginning),Exclude
+115115,Farm Labor Contractors and Crew Leaders,Exclude
+115116,Farm Management Services,Exclude
+115210,Support Activities for Animal Production,Exclude
+115310,Support Activities for Forestry,Exclude
+211120,Crude Petroleum Extraction,Exclude
+211130,Natural Gas Extraction,Exclude
+212114,Surface Coal Mining,Exclude
+212115,Underground Coal Mining,Exclude
+212210,Iron Ore Mining,Exclude
+212220,Gold Ore and Silver Ore Mining,Exclude
+212230,"Copper, Nickel, Lead, and Zinc Mining",Exclude
+212290,Other Metal Ore Mining,Exclude
+212311,Dimension Stone Mining and Quarrying,Exclude
+212312,Crushed and Broken Limestone Mining and Quarrying,Exclude
+212313,Crushed and Broken Granite Mining and Quarrying,Exclude
+212319,Other Crushed and Broken Stone Mining and Quarrying,Exclude
+212321,Construction Sand and Gravel Mining,Exclude
+212322,Industrial Sand Mining,Exclude
+212323,"Kaolin, Clay, and Ceramic and Refractory Minerals Mining",Exclude
+212390,Other Nonmetallic Mineral Mining and Quarrying,Exclude
+213111,Drilling Oil and Gas Wells,Exclude
+213112,Support Activities for Oil and Gas Operations,Exclude
+213113,Support Activities for Coal Mining,Exclude
+213114,Support Activities for Metal Mining,Exclude
+213115,Support Activities for Nonmetallic Minerals (except Fuels) Mining,Exclude
+221111,Hydroelectric Power Generation,Exclude
+221112,Fossil Fuel Electric Power Generation,Exclude
+221113,Nuclear Electric Power Generation,Exclude
+221114,Solar Electric Power Generation,Exclude
+221115,Wind Electric Power Generation,Exclude
+221116,Geothermal Electric Power Generation,Exclude
+221117,Biomass Electric Power Generation,Exclude
+221118,Other Electric Power Generation,Exclude
+221121,Electric Bulk Power Transmission and Control,Exclude
+221122,Electric Power Distribution,Exclude
+221210,Natural Gas Distribution,Exclude
+221310,Water Supply and Irrigation Systems,Exclude
+221320,Sewage Treatment Facilities,Exclude
+221330,Steam and Air-Conditioning Supply,Exclude
+236115,New Single-Family Housing Construction (except For-Sale Builders),High
+236116,New Multifamily Housing Construction (except For-Sale Builders),Low
+236117,New Housing For-Sale Builders,High
+236118,Residential Remodelers,High
+236210,Industrial Building Construction,Exclude
+236220,Commercial and Institutional Building Construction,Exclude
+237110,Water and Sewer Line and Related Structures Construction,Exclude
+237120,Oil and Gas Pipeline and Related Structures Construction,Exclude
+237130,Power and Communication Line and Related Structures Construction,Exclude
+237210,Land Subdivision,Exclude
+237310,"Highway, Street, and Bridge Construction",Exclude
+237990,Other Heavy and Civil Engineering Construction,Exclude
+238110,Poured Concrete Foundation and Structure Contractors,Exclude
+238120,Structural Steel and Precast Concrete Contractors,Exclude
+238130,Framing Contractors,Low
+238140,Masonry Contractors,Low
+238150,Glass and Glazing Contractors,High
+238160,Roofing Contractors,High
+238170,Siding Contractors,High
+238190,"Other Foundation, Structure, and Building Exterior Contractors",High
+238210,Electrical Contractors and Other Wiring Installation Contractors,High
+238220,"Plumbing, Heating, and Air-Conditioning Contractors",High
+238290,Other Building Equipment Contractors,High
+238310,Drywall and Insulation Contractors,High
+238320,Painting and Wall Covering Contractors,High
+238330,Flooring Contractors,High
+238340,Tile and Terrazzo Contractors,High
+238350,Finish Carpentry Contractors,High
+238390,Other Building Finishing Contractors,High
+238910,Site Preparation Contractors,Low
+238990,All Other Specialty Trade Contractors,Medium
+311111,Dog and Cat Food Manufacturing,Exclude
+311119,Other Animal Food Manufacturing,Exclude
+311211,Flour Milling,Exclude
+311212,Rice Milling,Exclude
+311213,Malt Manufacturing,Exclude
+311221,Wet Corn Milling and Starch Manufacturing,Exclude
+311224,Soybean and Other Oilseed Processing,Exclude
+311225,Fats and Oils Refining and Blending,Exclude
+311230,Breakfast Cereal Manufacturing,Exclude
+311313,Beet Sugar Manufacturing,Exclude
+311314,Cane Sugar Manufacturing,Exclude
+311340,Nonchocolate Confectionery Manufacturing,Exclude
+311351,Chocolate and Confectionery Manufacturing from Cacao Beans,Exclude
+311352,Confectionery Manufacturing from Purchased Chocolate,Exclude
+311411,"Frozen Fruit, Juice, and Vegetable Manufacturing",Exclude
+311412,Frozen Specialty Food Manufacturing,Exclude
+311421,Fruit and Vegetable Canning,Exclude
+311422,Specialty Canning,Exclude
+311423,Dried and Dehydrated Food Manufacturing,Exclude
+311511,Fluid Milk Manufacturing,Exclude
+311512,Creamery Butter Manufacturing,Exclude
+311513,Cheese Manufacturing,Exclude
+311514,"Dry, Condensed, and Evaporated Dairy Product Manufacturing",Exclude
+311520,Ice Cream and Frozen Dessert Manufacturing,Exclude
+311611,Animal (except Poultry) Slaughtering,Exclude
+311612,Meat Processed from Carcasses,Exclude
+311613,Rendering and Meat Byproduct Processing,Exclude
+311615,Poultry Processing,Exclude
+311710,Seafood Product Preparation and Packaging,Exclude
+311811,Retail Bakeries,Exclude
+311812,Commercial Bakeries,Exclude
+311813,"Frozen Cakes, Pies, and Other Pastries Manufacturing",Exclude
+311821,Cookie and Cracker Manufacturing,Exclude
+311824,"Dry Pasta, Dough, and Flour Mixes Manufacturing from Purchased Flour",Exclude
+311830,Tortilla Manufacturing,Exclude
+311911,Roasted Nuts and Peanut Butter Manufacturing,Exclude
+311919,Other Snack Food Manufacturing,Exclude
+311920,Coffee and Tea Manufacturing,Exclude
+311930,Flavoring Syrup and Concentrate Manufacturing,Exclude
+311941,"Mayonnaise, Dressing, and Other Prepared Sauce Manufacturing",Exclude
+311942,Spice and Extract Manufacturing,Exclude
+311991,Perishable Prepared Food Manufacturing,Exclude
+311999,All Other Miscellaneous Food Manufacturing,Exclude
+312111,Soft Drink Manufacturing,Exclude
+312112,Bottled Water Manufacturing,Exclude
+312113,Ice Manufacturing,Exclude
+312120,Breweries,Exclude
+312130,Wineries,Exclude
+312140,Distilleries,Exclude
+312230,Tobacco Manufacturing,Exclude
+313110,"Fiber, Yarn, and Thread Mills",Exclude
+313210,Broadwoven Fabric Mills,Exclude
+313220,Narrow Fabric Mills and Schiffli Machine Embroidery,Exclude
+313230,Nonwoven Fabric Mills,Exclude
+313240,Knit Fabric Mills,Exclude
+313310,Textile and Fabric Finishing Mills,Exclude
+313320,Fabric Coating Mills,Exclude
+314110,Carpet and Rug Mills,Exclude
+314120,Curtain and Linen Mills,Exclude
+314910,Textile Bag and Canvas Mills,Exclude
+314994,"Rope, Cordage, Twine, Tire Cord, and Tire Fabric Mills",Exclude
+314999,All Other Miscellaneous Textile Product Mills,Exclude
+315120,Apparel Knitting Mills,Exclude
+315210,Cut and Sew Apparel Contractors,Exclude
+315250,Cut and Sew Apparel Manufacturing (except Contractors),Exclude
+315990,Apparel Accessories and Other Apparel Manufacturing,Exclude
+316110,Leather and Hide Tanning and Finishing,Exclude
+316210,Footwear Manufacturing,Exclude
+316990,Other Leather and Allied Product Manufacturing,Exclude
+321113,Sawmills,Exclude
+321114,Wood Preservation,Exclude
+321211,Hardwood Veneer and Plywood Manufacturing,Exclude
+321212,Softwood Veneer and Plywood Manufacturing,Exclude
+321215,Engineered Wood Member Manufacturing,Exclude
+321219,Reconstituted Wood Product Manufacturing,Exclude
+321911,Wood Window and Door Manufacturing,Exclude
+321912,"Cut Stock, Resawing Lumber, and Planing",Exclude
+321918,Other Millwork (including Flooring),Exclude
+321920,Wood Container and Pallet Manufacturing,Exclude
+321991,Manufactured Home (Mobile Home) Manufacturing,Exclude
+321992,Prefabricated Wood Building Manufacturing,Exclude
+321999,All Other Miscellaneous Wood Product Manufacturing,Exclude
+322110,Pulp Mills,Exclude
+322120,Paper Mills,Exclude
+322130,Paperboard Mills,Exclude
+322211,Corrugated and Solid Fiber Box Manufacturing,Exclude
+322212,Folding Paperboard Box Manufacturing,Exclude
+322219,Other Paperboard Container Manufacturing,Exclude
+322220,Paper Bag and Coated and Treated Paper Manufacturing,Exclude
+322230,Stationery Product Manufacturing,Exclude
+322291,Sanitary Paper Product Manufacturing,Exclude
+322299,All Other Converted Paper Product Manufacturing,Exclude
+323111,Commercial Printing (except Screen and Books),Exclude
+323113,Commercial Screen Printing,Exclude
+323117,Books Printing,Exclude
+323120,Support Activities for Printing,Exclude
+324110,Petroleum Refineries,Exclude
+324121,Asphalt Paving Mixture and Block Manufacturing,Exclude
+324122,Asphalt Shingle and Coating Materials Manufacturing,Exclude
+324191,Petroleum Lubricating Oil and Grease Manufacturing,Exclude
+324199,All Other Petroleum and Coal Products Manufacturing,Exclude
+325110,Petrochemical Manufacturing,Exclude
+325120,Industrial Gas Manufacturing,Exclude
+325130,Synthetic Dye and Pigment Manufacturing,Exclude
+325180,Other Basic Inorganic Chemical Manufacturing,Exclude
+325193,Ethyl Alcohol Manufacturing,Exclude
+325194,"Cyclic Crude, Intermediate, and Gum and Wood Chemical Manufacturing",Exclude
+325199,All Other Basic Organic Chemical Manufacturing,Exclude
+325211,Plastics Material and Resin Manufacturing,Exclude
+325212,Synthetic Rubber Manufacturing,Exclude
+325220,Artificial and Synthetic Fibers and Filaments Manufacturing,Exclude
+325311,Nitrogenous Fertilizer Manufacturing,Exclude
+325312,Phosphatic Fertilizer Manufacturing,Exclude
+325314,Fertilizer (Mixing Only) Manufacturing,Exclude
+325315,Compost Manufacturing,Exclude
+325320,Pesticide and Other Agricultural Chemical Manufacturing,Exclude
+325411,Medicinal and Botanical Manufacturing,Exclude
+325412,Pharmaceutical Preparation Manufacturing,Exclude
+325413,In-Vitro Diagnostic Substance Manufacturing,Exclude
+325414,Biological Product (except Diagnostic) Manufacturing,Exclude
+325510,Paint and Coating Manufacturing,Exclude
+325520,Adhesive Manufacturing,Exclude
+325611,Soap and Other Detergent Manufacturing,Exclude
+325612,Polish and Other Sanitation Good Manufacturing,Exclude
+325613,Surface Active Agent Manufacturing,Exclude
+325620,Toilet Preparation Manufacturing,Exclude
+325910,Printing Ink Manufacturing,Exclude
+325920,Explosives Manufacturing,Exclude
+325991,Custom Compounding of Purchased Resins,Exclude
+325992,"Photographic Film, Paper, Plate, Chemical, and Copy Toner Manufacturing",Exclude
+325998,All Other Miscellaneous Chemical Product and Preparation Manufacturing,Exclude
+326111,Plastics Bag and Pouch Manufacturing,Exclude
+326112,Plastics Packaging Film and Sheet (including Laminated) Manufacturing,Exclude
+326113,Unlaminated Plastics Film and Sheet (except Packaging) Manufacturing,Exclude
+326121,Unlaminated Plastics Profile Shape Manufacturing,Exclude
+326122,Plastics Pipe and Pipe Fitting Manufacturing,Exclude
+326130,"Laminated Plastics Plate, Sheet (except Packaging), and Shape Manufacturing",Exclude
+326140,Polystyrene Foam Product Manufacturing,Exclude
+326150,Urethane and Other Foam Product (except Polystyrene) Manufacturing,Exclude
+326160,Plastics Bottle Manufacturing,Exclude
+326191,Plastics Plumbing Fixture Manufacturing,Exclude
+326199,All Other Plastics Product Manufacturing,Exclude
+326211,Tire Manufacturing (except Retreading),Exclude
+326212,Tire Retreading,Exclude
+326220,Rubber and Plastics Hoses and Belting Manufacturing,Exclude
+326291,Rubber Product Manufacturing for Mechanical Use,Exclude
+326299,All Other Rubber Product Manufacturing,Exclude
+327110,"Pottery, Ceramics, and Plumbing Fixture Manufacturing",Exclude
+327120,Clay Building Material and Refractories Manufacturing,Exclude
+327211,Flat Glass Manufacturing,Exclude
+327212,Other Pressed and Blown Glass and Glassware Manufacturing,Exclude
+327213,Glass Container Manufacturing,Exclude
+327215,Glass Product Manufacturing Made of Purchased Glass,Exclude
+327310,Cement Manufacturing,Exclude
+327320,Ready-Mix Concrete Manufacturing,Exclude
+327331,Concrete Block and Brick Manufacturing,Exclude
+327332,Concrete Pipe Manufacturing,Exclude
+327390,Other Concrete Product Manufacturing,Exclude
+327410,Lime Manufacturing,Exclude
+327420,Gypsum Product Manufacturing,Exclude
+327910,Abrasive Product Manufacturing,Exclude
+327991,Cut Stone and Stone Product Manufacturing,Exclude
+327992,Ground or Treated Mineral and Earth Manufacturing,Exclude
+327993,Mineral Wool Manufacturing,Exclude
+327999,All Other Miscellaneous Nonmetallic Mineral Product Manufacturing,Exclude
+331110,Iron and Steel Mills and Ferroalloy Manufacturing,Exclude
+331210,Iron and Steel Pipe and Tube Manufacturing from Purchased Steel,Exclude
+331221,Rolled Steel Shape Manufacturing,Exclude
+331222,Steel Wire Drawing,Exclude
+331313,Alumina Refining and Primary Aluminum Production,Exclude
+331314,Secondary Smelting and Alloying of Aluminum,Exclude
+331315,"Aluminum Sheet, Plate, and Foil Manufacturing",Exclude
+331318,"Other Aluminum Rolling, Drawing, and Extruding",Exclude
+331410,Nonferrous Metal (except Aluminum) Smelting and Refining,Exclude
+331420,"Copper Rolling, Drawing, Extruding, and Alloying",Exclude
+331491,"Nonferrous Metal (except Copper and Aluminum) Rolling, Drawing, and Extruding",Exclude
+331492,"Secondary Smelting, Refining, and Alloying of Nonferrous Metal (except Copper and Aluminum)",Exclude
+331511,Iron Foundries,Exclude
+331512,Steel Investment Foundries,Exclude
+331513,Steel Foundries (except Investment),Exclude
+331523,Nonferrous Metal Die-Casting Foundries,Exclude
+331524,Aluminum Foundries (except Die-Casting),Exclude
+331529,Other Nonferrous Metal Foundries (except Die-Casting),Exclude
+332111,Iron and Steel Forging,Exclude
+332112,Nonferrous Forging,Exclude
+332114,Custom Roll Forming,Exclude
+332117,Powder Metallurgy Part Manufacturing,Exclude
+332119,"Metal Crown, Closure, and Other Metal Stamping (except Automotive)",Exclude
+332215,"Metal Kitchen Cookware, Utensil, Cutlery, and Flatware (except Precious) Manufacturing",Exclude
+332216,Saw Blade and Handtool Manufacturing,Exclude
+332311,Prefabricated Metal Building and Component Manufacturing,Exclude
+332312,Fabricated Structural Metal Manufacturing,Exclude
+332313,Plate Work Manufacturing,Exclude
+332321,Metal Window and Door Manufacturing,Exclude
+332322,Sheet Metal Work Manufacturing,Exclude
+332323,Ornamental and Architectural Metal Work Manufacturing,Exclude
+332410,Power Boiler and Heat Exchanger Manufacturing,Exclude
+332420,Metal Tank (Heavy Gauge) Manufacturing,Exclude
+332431,Metal Can Manufacturing,Exclude
+332439,Other Metal Container Manufacturing,Exclude
+332510,Hardware Manufacturing,Exclude
+332613,Spring Manufacturing,Exclude
+332618,Other Fabricated Wire Product Manufacturing,Exclude
+332710,Machine Shops,Exclude
+332721,Precision Turned Product Manufacturing,Exclude
+332722,"Bolt, Nut, Screw, Rivet, and Washer Manufacturing",Exclude
+332811,Metal Heat Treating,Exclude
+332812,"Metal Coating, Engraving (except Jewelry and Silverware), and Allied Services to Manufacturers",Exclude
+332813,"Electroplating, Plating, Polishing, Anodizing, and Coloring",Exclude
+332911,Industrial Valve Manufacturing,Exclude
+332912,Fluid Power Valve and Hose Fitting Manufacturing,Exclude
+332913,Plumbing Fixture Fitting and Trim Manufacturing,Exclude
+332919,Other Metal Valve and Pipe Fitting Manufacturing,Exclude
+332991,Ball and Roller Bearing Manufacturing,Exclude
+332992,Small Arms Ammunition Manufacturing,Exclude
+332993,Ammunition (except Small Arms) Manufacturing,Exclude
+332994,"Small Arms, Ordnance, and Ordnance Accessories Manufacturing",Exclude
+332996,Fabricated Pipe and Pipe Fitting Manufacturing,Exclude
+332999,All Other Miscellaneous Fabricated Metal Product Manufacturing,Exclude
+333111,Farm Machinery and Equipment Manufacturing,Exclude
+333112,Lawn and Garden Tractor and Home Lawn and Garden Equipment Manufacturing,Exclude
+333120,Construction Machinery Manufacturing,Exclude
+333131,Mining Machinery and Equipment Manufacturing,Exclude
+333132,Oil and Gas Field Machinery and Equipment Manufacturing,Exclude
+333241,Food Product Machinery Manufacturing,Exclude
+333242,Semiconductor Machinery Manufacturing,Exclude
+333243,"Sawmill, Woodworking, and Paper Machinery Manufacturing",Exclude
+333248,All Other Industrial Machinery Manufacturing,Exclude
+333310,Commercial and Service Industry Machinery Manufacturing,Exclude
+333413,Industrial and Commercial Fan and Blower and Air Purification Equipment Manufacturing,Exclude
+333414,Heating Equipment (except Warm Air Furnaces) Manufacturing,Exclude
+333415,Air-Conditioning and Warm Air Heating Equipment and Commercial and Industrial Refrigeration Equipment Manufacturing,Exclude
+333511,Industrial Mold Manufacturing,Exclude
+333514,"Special Die and Tool, Die Set, Jig, and Fixture Manufacturing",Exclude
+333515,Cutting Tool and Machine Tool Accessory Manufacturing,Exclude
+333517,Machine Tool Manufacturing,Exclude
+333519,Rolling Mill and Other Metalworking Machinery Manufacturing,Exclude
+333611,Turbine and Turbine Generator Set Units Manufacturing,Exclude
+333612,"Speed Changer, Industrial High-Speed Drive, and Gear Manufacturing",Exclude
+333613,Mechanical Power Transmission Equipment Manufacturing,Exclude
+333618,Other Engine Equipment Manufacturing,Exclude
+333912,Air and Gas Compressor Manufacturing,Exclude
+333914,"Measuring, Dispensing, and Other Pumping Equipment Manufacturing",Exclude
+333921,Elevator and Moving Stairway Manufacturing,Exclude
+333922,Conveyor and Conveying Equipment Manufacturing,Exclude
+333923,"Overhead Traveling Crane, Hoist, and Monorail System Manufacturing",Exclude
+333924,"Industrial Truck, Tractor, Trailer, and Stacker Machinery Manufacturing",Exclude
+333991,Power-Driven Handtool Manufacturing,Exclude
+333992,Welding and Soldering Equipment Manufacturing,Exclude
+333993,Packaging Machinery Manufacturing,Exclude
+333994,Industrial Process Furnace and Oven Manufacturing,Exclude
+333995,Fluid Power Cylinder and Actuator Manufacturing,Exclude
+333996,Fluid Power Pump and Motor Manufacturing,Exclude
+333998,All Other Miscellaneous General Purpose Machinery Manufacturing,Exclude
+334111,Electronic Computer Manufacturing,Exclude
+334112,Computer Storage Device Manufacturing,Exclude
+334118,Computer Terminal and Other Computer Peripheral Equipment Manufacturing,Exclude
+334210,Telephone Apparatus Manufacturing,Exclude
+334220,Radio and Television Broadcasting and Wireless Communications Equipment Manufacturing,Exclude
+334290,Other Communications Equipment Manufacturing,Exclude
+334310,Audio and Video Equipment Manufacturing,Exclude
+334412,Bare Printed Circuit Board Manufacturing,Exclude
+334413,Semiconductor and Related Device Manufacturing,Exclude
+334416,"Capacitor, Resistor, Coil, Transformer, and Other Inductor Manufacturing",Exclude
+334417,Electronic Connector Manufacturing,Exclude
+334418,Printed Circuit Assembly (Electronic Assembly) Manufacturing,Exclude
+334419,Other Electronic Component Manufacturing,Exclude
+334510,Electromedical and Electrotherapeutic Apparatus Manufacturing,Exclude
+334511,"Search, Detection, Navigation, Guidance, Aeronautical, and Nautical System and Instrument Manufacturing",Exclude
+334512,"Automatic Environmental Control Manufacturing for Residential, Commercial, and Appliance Use",Exclude
+334513,"Instruments and Related Products Manufacturing for Measuring, Displaying, and Controlling Industrial Process Variables",Exclude
+334514,Totalizing Fluid Meter and Counting Device Manufacturing,Exclude
+334515,Instrument Manufacturing for Measuring and Testing Electricity and Electrical Signals,Exclude
+334516,Analytical Laboratory Instrument Manufacturing,Exclude
+334517,Irradiation Apparatus Manufacturing,Exclude
+334519,Other Measuring and Controlling Device Manufacturing,Exclude
+334610,Manufacturing and Reproducing Magnetic and Optical Media,Exclude
+335131,Residential Electric Lighting Fixture Manufacturing,Exclude
+335132,"Commercial, Industrial, and Institutional Electric Lighting Fixture Manufacturing",Exclude
+335139,Electric Lamp Bulb and Other Lighting Equipment Manufacturing,Exclude
+335210,Small Electrical Appliance Manufacturing,Exclude
+335220,Major Household Appliance Manufacturing,Exclude
+335311,"Power, Distribution, and Specialty Transformer Manufacturing",Exclude
+335312,Motor and Generator Manufacturing,Exclude
+335313,Switchgear and Switchboard Apparatus Manufacturing,Exclude
+335314,Relay and Industrial Control Manufacturing,Exclude
+335910,Battery Manufacturing,Exclude
+335921,Fiber Optic Cable Manufacturing,Exclude
+335929,Other Communication and Energy Wire Manufacturing,Exclude
+335931,Current-Carrying Wiring Device Manufacturing,Exclude
+335932,Noncurrent-Carrying Wiring Device Manufacturing,Exclude
+335991,Carbon and Graphite Product Manufacturing,Exclude
+335999,All Other Miscellaneous Electrical Equipment and Component Manufacturing,Exclude
+336110,Automobile and Light Duty Motor Vehicle Manufacturing,Exclude
+336120,Heavy Duty Truck Manufacturing,Exclude
+336211,Motor Vehicle Body Manufacturing,Exclude
+336212,Truck Trailer Manufacturing,Exclude
+336213,Motor Home Manufacturing,Exclude
+336214,Travel Trailer and Camper Manufacturing,Exclude
+336310,Motor Vehicle Gasoline Engine and Engine Parts Manufacturing,Exclude
+336320,Motor Vehicle Electrical and Electronic Equipment Manufacturing,Exclude
+336330,Motor Vehicle Steering and Suspension Components (except Spring) Manufacturing,Exclude
+336340,Motor Vehicle Brake System Manufacturing,Exclude
+336350,Motor Vehicle Transmission and Power Train Parts Manufacturing,Exclude
+336360,Motor Vehicle Seating and Interior Trim Manufacturing,Exclude
+336370,Motor Vehicle Metal Stamping,Exclude
+336390,Other Motor Vehicle Parts Manufacturing,Exclude
+336411,Aircraft Manufacturing,Exclude
+336412,Aircraft Engine and Engine Parts Manufacturing,Exclude
+336413,Other Aircraft Parts and Auxiliary Equipment Manufacturing,Exclude
+336414,Guided Missile and Space Vehicle Manufacturing,Exclude
+336415,Guided Missile and Space Vehicle Propulsion Unit and Propulsion Unit Parts Manufacturing,Exclude
+336419,Other Guided Missile and Space Vehicle Parts and Auxiliary Equipment Manufacturing,Exclude
+336510,Railroad Rolling Stock Manufacturing,Exclude
+336611,Ship Building and Repairing,Exclude
+336612,Boat Building,Exclude
+336991,"Motorcycle, Bicycle, and Parts Manufacturing",Exclude
+336992,"Military Armored Vehicle, Tank, and Tank Component Manufacturing",Exclude
+336999,All Other Transportation Equipment Manufacturing,Exclude
+337110,Wood Kitchen Cabinet and Countertop Manufacturing,Exclude
+337121,Upholstered Household Furniture Manufacturing,Exclude
+337122,Nonupholstered Wood Household Furniture Manufacturing,Exclude
+337126,Household Furniture (except Wood and Upholstered) Manufacturing,Exclude
+337127,Institutional Furniture Manufacturing,Exclude
+337211,Wood Office Furniture Manufacturing,Exclude
+337212,Custom Architectural Woodwork and Millwork Manufacturing,Exclude
+337214,Office Furniture (except Wood) Manufacturing,Exclude
+337215,"Showcase, Partition, Shelving, and Locker Manufacturing",Exclude
+337910,Mattress Manufacturing,Exclude
+337920,Blind and Shade Manufacturing,Exclude
+339112,Surgical and Medical Instrument Manufacturing,Exclude
+339113,Surgical Appliance and Supplies Manufacturing,Exclude
+339114,Dental Equipment and Supplies Manufacturing,Exclude
+339115,Ophthalmic Goods Manufacturing,Exclude
+339116,Dental Laboratories,Exclude
+339910,Jewelry and Silverware Manufacturing,Exclude
+339920,Sporting and Athletic Goods Manufacturing,Exclude
+339930,"Doll, Toy, and Game Manufacturing",Exclude
+339940,Office Supplies (except Paper) Manufacturing,Exclude
+339950,Sign Manufacturing,Exclude
+339991,"Gasket, Packing, and Sealing Device Manufacturing",Exclude
+339992,Musical Instrument Manufacturing,Exclude
+339993,"Fastener, Button, Needle, and Pin Manufacturing",Exclude
+339994,"Broom, Brush, and Mop Manufacturing",Exclude
+339995,Burial Casket Manufacturing,Exclude
+339999,All Other Miscellaneous Manufacturing,Exclude
+423110,Automobile and Other Motor Vehicle Merchant Wholesalers,Exclude
+423120,Motor Vehicle Supplies and New Parts Merchant Wholesalers,Exclude
+423130,Tire and Tube Merchant Wholesalers,Exclude
+423140,Motor Vehicle Parts (Used) Merchant Wholesalers,Exclude
+423210,Furniture Merchant Wholesalers,Exclude
+423220,Home Furnishing Merchant Wholesalers,Exclude
+423310,"Lumber, Plywood, Millwork, and Wood Panel Merchant Wholesalers",Exclude
+423320,"Brick, Stone, and Related Construction Material Merchant Wholesalers",Exclude
+423330,"Roofing, Siding, and Insulation Material Merchant Wholesalers",Exclude
+423390,Other Construction Material Merchant Wholesalers,Exclude
+423410,Photographic Equipment and Supplies Merchant Wholesalers,Exclude
+423420,Office Equipment Merchant Wholesalers,Exclude
+423430,Computer and Computer Peripheral Equipment and Software Merchant Wholesalers,Exclude
+423440,Other Commercial Equipment Merchant Wholesalers,Exclude
+423450,"Medical, Dental, and Hospital Equipment and Supplies Merchant Wholesalers",Exclude
+423460,Ophthalmic Goods Merchant Wholesalers,Exclude
+423490,Other Professional Equipment and Supplies Merchant Wholesalers,Exclude
+423510,Metal Service Centers and Other Metal Merchant Wholesalers,Exclude
+423520,Coal and Other Mineral and Ore Merchant Wholesalers,Exclude
+423610,"Electrical Apparatus and Equipment, Wiring Supplies, and Related Equipment Merchant Wholesalers",Exclude
+423620,"Household Appliances, Electric Housewares, and Consumer Electronics Merchant Wholesalers",Exclude
+423690,Other Electronic Parts and Equipment Merchant Wholesalers,Exclude
+423710,Hardware Merchant Wholesalers,Exclude
+423720,Plumbing and Heating Equipment and Supplies (Hydronics) Merchant Wholesalers,Exclude
+423730,Warm Air Heating and Air-Conditioning Equipment and Supplies Merchant Wholesalers,Exclude
+423740,Refrigeration Equipment and Supplies Merchant Wholesalers,Exclude
+423810,Construction and Mining (except Oil Well) Machinery and Equipment Merchant Wholesalers,Exclude
+423820,Farm and Garden Machinery and Equipment Merchant Wholesalers,Exclude
+423830,Industrial Machinery and Equipment Merchant Wholesalers,Exclude
+423840,Industrial Supplies Merchant Wholesalers,Exclude
+423850,Service Establishment Equipment and Supplies Merchant Wholesalers,Exclude
+423860,Transportation Equipment and Supplies (except Motor Vehicle) Merchant Wholesalers,Exclude
+423910,Sporting and Recreational Goods and Supplies Merchant Wholesalers,Exclude
+423920,Toy and Hobby Goods and Supplies Merchant Wholesalers,Exclude
+423930,Recyclable Material Merchant Wholesalers,Exclude
+423940,"Jewelry, Watch, Precious Stone, and Precious Metal Merchant Wholesalers",Exclude
+423990,Other Miscellaneous Durable Goods Merchant Wholesalers,Exclude
+424110,Printing and Writing Paper Merchant Wholesalers,Exclude
+424120,Stationery and Office Supplies Merchant Wholesalers,Exclude
+424130,Industrial and Personal Service Paper Merchant Wholesalers,Exclude
+424210,Drugs and Druggists' Sundries Merchant Wholesalers,Exclude
+424310,"Piece Goods, Notions, and Other Dry Goods Merchant Wholesalers",Exclude
+424340,Footwear Merchant Wholesalers,Exclude
+424350,Clothing and Clothing Accessories Merchant Wholesalers,Exclude
+424410,General Line Grocery Merchant Wholesalers,Exclude
+424420,Packaged Frozen Food Merchant Wholesalers,Exclude
+424430,Dairy Product (except Dried or Canned) Merchant Wholesalers,Exclude
+424440,Poultry and Poultry Product Merchant Wholesalers,Exclude
+424450,Confectionery Merchant Wholesalers,Exclude
+424460,Fish and Seafood Merchant Wholesalers,Exclude
+424470,Meat and Meat Product Merchant Wholesalers,Exclude
+424480,Fresh Fruit and Vegetable Merchant Wholesalers,Exclude
+424490,Other Grocery and Related Products Merchant Wholesalers,Exclude
+424510,Grain and Field Bean Merchant Wholesalers,Exclude
+424520,Livestock Merchant Wholesalers,Exclude
+424590,Other Farm Product Raw Material Merchant Wholesalers,Exclude
+424610,Plastics Materials and Basic Forms and Shapes Merchant Wholesalers,Exclude
+424690,Other Chemical and Allied Products Merchant Wholesalers,Exclude
+424710,Petroleum Bulk Stations and Terminals,Exclude
+424720,Petroleum and Petroleum Products Merchant Wholesalers (except Bulk Stations and Terminals),Exclude
+424810,Beer and Ale Merchant Wholesalers,Exclude
+424820,Wine and Distilled Alcoholic Beverage Merchant Wholesalers,Exclude
+424910,Farm Supplies Merchant Wholesalers,Exclude
+424920,"Book, Periodical, and Newspaper Merchant Wholesalers",Exclude
+424930,"Flower, Nursery Stock, and Florists' Supplies Merchant Wholesalers",Exclude
+424940,Tobacco Product and Electronic Cigarette Merchant Wholesalers,Exclude
+424950,"Paint, Varnish, and Supplies Merchant Wholesalers",Exclude
+424990,Other Miscellaneous Nondurable Goods Merchant Wholesalers,Exclude
+425120,Wholesale Trade Agents and Brokers,Exclude
+441110,New Car Dealers,High
+441120,Used Car Dealers,High
+441210,Recreational Vehicle Dealers,High
+441222,Boat Dealers,High
+441227,"Motorcycle, ATV, and All Other Motor Vehicle Dealers",High
+441330,Automotive Parts and Accessories Retailers,Medium
+441340,Tire Dealers,High
+444110,Home Centers,High
+444120,Paint and Wallpaper Retailers,Medium
+444140,Hardware Retailers,High
+444180,Other Building Material Dealers,High
+444230,Outdoor Power Equipment Retailers,High
+444240,"Nursery, Garden Center, and Farm Supply Retailers",High
+445110,Supermarkets and Other Grocery Retailers (except Convenience Retailers),Medium
+445131,Convenience Retailers,Medium
+445132,Vending Machine Operators,Exclude
+445230,Fruit and Vegetable Retailers,Medium
+445240,Meat Retailers,Medium
+445250,Fish and Seafood Retailers,Medium
+445291,Baked Goods Retailers,High
+445292,Confectionery and Nut Retailers,Medium
+445298,All Other Specialty Food Retailers,Medium
+445320,"Beer, Wine, and Liquor Retailers",High
+449110,Furniture Retailers,High
+449121,Floor Covering Retailers,High
+449122,Window Treatment Retailers,High
+449129,All Other Home Furnishings Retailers,High
+449210,Electronics and Appliance Retailers,High
+455110,Department Stores,Medium
+455211,Warehouse Clubs and Supercenters,Exclude
+455219,All Other General Merchandise Retailers,Medium
+456110,Pharmacies and Drug Retailers,Medium
+456120,"Cosmetics, Beauty Supplies, and Perfume Retailers",High
+456130,Optical Goods Retailers,Medium
+456191,Food (Health) Supplement Retailers,Low
+456199,All Other Health and Personal Care Retailers,Low
+457110,Gasoline Stations with Convenience Stores,Exclude
+457120,Other Gasoline Stations,Exclude
+457210,Fuel Dealers,Exclude
+458110,Clothing and Clothing Accessories Retailers,High
+458210,Shoe Retailers,High
+458310,Jewelry Retailers,High
+458320,Luggage and Leather Goods Retailers,High
+459110,Sporting Goods Retailers,High
+459120,"Hobby, Toy, and Game Retailers",High
+459130,"Sewing, Needlework, and Piece Goods Retailers",Medium
+459140,Musical Instrument and Supplies Retailers,Medium
+459210,Book Retailers and News Dealers,Medium
+459310,Florists,Medium
+459410,Office Supplies and Stationery Retailers,Medium
+459420,"Gift, Novelty, and Souvenir Retailers",Medium
+459510,Used Merchandise Retailers,Medium
+459910,Pet and Pet Supplies Retailers,Medium
+459920,Art Dealers,Low
+459930,Manufactured (Mobile) Home Dealers,Medium
+459991,"Tobacco, Electronic Cigarette, and Other Smoking Supplies Retailers",Exclude
+459999,All Other Miscellaneous Retailers,Exclude
+481111,Scheduled Passenger Air Transportation,Exclude
+481112,Scheduled Freight Air Transportation,Exclude
+481211,Nonscheduled Chartered Passenger Air Transportation,Exclude
+481212,Nonscheduled Chartered Freight Air Transportation,Exclude
+481219,Other Nonscheduled Air Transportation,Exclude
+482111,Line-Haul Railroads,Exclude
+482112,Short Line Railroads,Exclude
+483111,Deep Sea Freight Transportation,Exclude
+483112,Deep Sea Passenger Transportation,Exclude
+483113,Coastal and Great Lakes Freight Transportation,Exclude
+483114,Coastal and Great Lakes Passenger Transportation,Exclude
+483211,Inland Water Freight Transportation,Exclude
+483212,Inland Water Passenger Transportation,Exclude
+484110,"General Freight Trucking, Local",Low
+484121,"General Freight Trucking, Long-Distance, Truckload",Exclude
+484122,"General Freight Trucking, Long-Distance, Less Than Truckload",Exclude
+484210,Used Household and Office Goods Moving,High
+484220,"Specialized Freight (except Used Goods) Trucking, Local",Exclude
+484230,"Specialized Freight (except Used Goods) Trucking, Long-Distance",Exclude
+485111,Mixed Mode Transit Systems,Exclude
+485112,Commuter Rail Systems,Exclude
+485113,Bus and Other Motor Vehicle Transit Systems,Exclude
+485119,Other Urban Transit Systems,Exclude
+485210,Interurban and Rural Bus Transportation,Exclude
+485310,Taxi and Ridesharing Services,Low
+485320,Limousine Service,Medium
+485410,School and Employee Bus Transportation,Exclude
+485510,Charter Bus Industry,Exclude
+485991,Special Needs Transportation,Exclude
+485999,All Other Transit and Ground Passenger Transportation,Exclude
+486110,Pipeline Transportation of Crude Oil,Exclude
+486210,Pipeline Transportation of Natural Gas,Exclude
+486910,Pipeline Transportation of Refined Petroleum Products,Exclude
+486990,All Other Pipeline Transportation,Exclude
+487110,"Scenic and Sightseeing Transportation, Land",Medium
+487210,"Scenic and Sightseeing Transportation, Water",Medium
+487990,"Scenic and Sightseeing Transportation, Other",Medium
+488111,Air Traffic Control,Exclude
+488119,Other Airport Operations,Exclude
+488190,Other Support Activities for Air Transportation,Exclude
+488210,Support Activities for Rail Transportation,Exclude
+488310,Port and Harbor Operations,Exclude
+488320,Marine Cargo Handling,Exclude
+488330,Navigational Services to Shipping,Exclude
+488390,Other Support Activities for Water Transportation,Exclude
+488410,Motor Vehicle Towing,Medium
+488490,Other Support Activities for Road Transportation,Exclude
+488510,Freight Transportation Arrangement,Exclude
+488991,Packing and Crating,Exclude
+488999,All Other Support Activities for Transportation,Exclude
+491110,Postal Service,Exclude
+492110,Couriers and Express Delivery Services,Exclude
+492210,Local Messengers and Local Delivery,Medium
+493110,General Warehousing and Storage,Exclude
+493120,Refrigerated Warehousing and Storage,Exclude
+493130,Farm Product Warehousing and Storage,Exclude
+493190,Other Warehousing and Storage,Exclude
+512110,Motion Picture and Video Production,Low
+512120,Motion Picture and Video Distribution,Low
+512131,Motion Picture Theaters (except Drive-Ins),Medium
+512132,Drive-In Motion Picture Theaters,Medium
+512191,Teleproduction and Other Postproduction Services,Exclude
+512199,Other Motion Picture and Video Industries,Exclude
+512230,Music Publishers,Low
+512240,Sound Recording Studios,Low
+512250,Record Production and Distribution,Low
+512290,Other Sound Recording Industries,Low
+513110,Newspaper Publishers,Exclude
+513120,Periodical Publishers,Exclude
+513130,Book Publishers,Exclude
+513140,Directory and Mailing List Publishers,Exclude
+513191,Greeting Card Publishers,Exclude
+513199,All Other Publishers,Exclude
+513210,Software Publishers,Low
+516110,Radio Broadcasting Stations,Exclude
+516120,Television Broadcasting Stations,Exclude
+516210,"Media Streaming Distribution Services, Social Networks, and Other Media Networks and Content Providers",Exclude
+517111,Wired Telecommunications Carriers,Exclude
+517112,Wireless Telecommunications Carriers (except Satellite),Low
+517121,Telecommunications Resellers,Exclude
+517122,Agents for Wireless Telecommunications Services,Exclude
+517410,Satellite Telecommunications,Exclude
+517810,All Other Telecommunications,Exclude
+518210,"Computing Infrastructure Providers, Data Processing, Web Hosting, and Related Services",Low
+519210,Libraries and Archives,Exclude
+519290,Web Search Portals and All Other Information Services,Exclude
+521110,Monetary Authorities-Central Bank,Exclude
+522110,Commercial Banking,Exclude
+522130,Credit Unions,Medium
+522180,Savings Institutions and Other Depository Credit Intermediation,Exclude
+522210,Credit Card Issuing,Exclude
+522220,Sales Financing,Exclude
+522291,Consumer Lending,Exclude
+522292,Real Estate Credit,Exclude
+522299,"International, Secondary Market, and All Other Nondepository Credit Intermediation",Exclude
+522310,Mortgage and Nonmortgage Loan Brokers,Exclude
+522320,"Financial Transactions Processing, Reserve, and Clearinghouse Activities",Exclude
+522390,Other Activities Related to Credit Intermediation,Exclude
+523150,Investment Banking and Securities Intermediation,Exclude
+523160,Commodity Contracts Intermediation,Exclude
+523210,Securities and Commodity Exchanges,Exclude
+523910,Miscellaneous Intermediation,Exclude
+523940,Portfolio Management and Investment Advice,Exclude
+523991,"Trust, Fiduciary, and Custody Activities",Exclude
+523999,Miscellaneous Financial Investment Activities,Exclude
+524113,Direct Life Insurance Carriers,Exclude
+524114,Direct Health and Medical Insurance Carriers,Exclude
+524126,Direct Property and Casualty Insurance Carriers,Exclude
+524127,Direct Title Insurance Carriers,Exclude
+524128,"Other Direct Insurance (except Life, Health, and Medical) Carriers",Exclude
+524130,Reinsurance Carriers,Exclude
+524210,Insurance Agencies and Brokerages,Exclude
+524291,Claims Adjusting,Exclude
+524292,Pharmacy Benefit Management and Other Third Party Administration of Insurance and Pension Funds,Exclude
+524298,All Other Insurance Related Activities,Exclude
+525110,Pension Funds,Exclude
+525120,Health and Welfare Funds,Exclude
+525190,Other Insurance Funds,Exclude
+525910,Open-End Investment Funds,Exclude
+525920,"Trusts, Estates, and Agency Accounts",Exclude
+525990,Other Financial Vehicles,Exclude
+531110,Lessors of Residential Buildings and Dwellings,Low
+531120,Lessors of Nonresidential Buildings (except Miniwarehouses),Exclude
+531130,Lessors of Miniwarehouses and Self-Storage Units,Low
+531190,Lessors of Other Real Estate Property,Low
+531210,Offices of Real Estate Agents and Brokers,Low
+531311,Residential Property Managers,Low
+531312,Nonresidential Property Managers,Exclude
+531320,Offices of Real Estate Appraisers,Exclude
+531390,Other Activities Related to Real Estate,Exclude
+532111,Passenger Car Rental,Low
+532112,Passenger Car Leasing,Low
+532120,"Truck, Utility Trailer, and RV (Recreational Vehicle) Rental and Leasing",Low
+532210,Consumer Electronics and Appliances Rental,Low
+532281,Formal Wear and Costume Rental,Low
+532282,Video Tape and Disc Rental,Low
+532283,Home Health Equipment Rental,Low
+532284,Recreational Goods Rental,Low
+532289,All Other Consumer Goods Rental,Low
+532310,General Rental Centers,Low
+532411,"Commercial Air, Rail, and Water Transportation Equipment Rental and Leasing",Exclude
+532412,"Construction, Mining, and Forestry Machinery and Equipment Rental and Leasing",Exclude
+532420,Office Machinery and Equipment Rental and Leasing,Exclude
+532490,Other Commercial and Industrial Machinery and Equipment Rental and Leasing,Exclude
+533110,Lessors of Nonfinancial Intangible Assets (except Copyrighted Works),Exclude
+541110,Offices of Lawyers,Medium
+541120,Offices of Notaries,Exclude
+541191,Title Abstract and Settlement Offices,Exclude
+541199,All Other Legal Services,Exclude
+541211,Offices of Certified Public Accountants,Exclude
+541213,Tax Preparation Services,Low
+541214,Payroll Services,Exclude
+541219,Other Accounting Services,Exclude
+541310,Architectural Services,Low
+541320,Landscape Architectural Services,High
+541330,Engineering Services,Exclude
+541340,Drafting Services,Exclude
+541350,Building Inspection Services,Exclude
+541360,Geophysical Surveying and Mapping Services,Exclude
+541370,Surveying and Mapping (except Geophysical) Services,Exclude
+541380,Testing Laboratories and Services,Exclude
+541410,Interior Design Services,High
+541420,Industrial Design Services,Exclude
+541430,Graphic Design Services,Exclude
+541490,Other Specialized Design Services,Exclude
+541511,Custom Computer Programming Services,Exclude
+541512,Computer Systems Design Services,Exclude
+541513,Computer Facilities Management Services,Exclude
+541519,Other Computer Related Services,Exclude
+541611,Administrative Management and General Management Consulting Services,Exclude
+541612,Human Resources Consulting Services,Exclude
+541613,Marketing Consulting Services,Exclude
+541614,"Process, Physical Distribution, and Logistics Consulting Services",Exclude
+541618,Other Management Consulting Services,Exclude
+541620,Environmental Consulting Services,Exclude
+541690,Other Scientific and Technical Consulting Services,Exclude
+541713,Research and Development in Nanotechnology,Exclude
+541714,Research and Development in Biotechnology (except Nanobiotechnology),Exclude
+541715,"Research and Development in the Physical, Engineering, and Life Sciences (except Nanotechnology and Biotechnology)",Exclude
+541720,Research and Development in the Social Sciences and Humanities,Exclude
+541810,Advertising Agencies,Exclude
+541820,Public Relations Agencies,Exclude
+541830,Media Buying Agencies,Exclude
+541840,Media Representatives,Exclude
+541850,Indoor and Outdoor Display Advertising,Exclude
+541860,Direct Mail Advertising,Exclude
+541870,Advertising Material Distribution Services,Exclude
+541890,Other Services Related to Advertising,Exclude
+541910,Marketing Research and Public Opinion Polling,Exclude
+541921,"Photography Studios, Portrait",Exclude
+541922,Commercial Photography,Exclude
+541930,Translation and Interpretation Services,Exclude
+541940,Veterinary Services,Exclude
+541990,"All Other Professional, Scientific, and Technical Services",Exclude
+551111,Offices of Bank Holding Companies,Exclude
+551112,Offices of Other Holding Companies,Exclude
+551114,"Corporate, Subsidiary, and Regional Managing Offices",Exclude
+561110,Office Administrative Services,Exclude
+561210,Facilities Support Services,Exclude
+561311,Employment Placement Agencies,Exclude
+561312,Executive Search Services,Exclude
+561320,Temporary Help Services,Exclude
+561330,Professional Employer Organizations,Exclude
+561410,Document Preparation Services,Exclude
+561421,Telephone Answering Services,Exclude
+561422,Telemarketing Bureaus and Other Contact Centers,Exclude
+561431,Private Mail Centers,Exclude
+561439,Other Business Service Centers (including Copy Shops),Exclude
+561440,Collection Agencies,Exclude
+561450,Credit Bureaus,Exclude
+561491,Repossession Services,Exclude
+561492,Court Reporting and Stenotype Services,Exclude
+561499,All Other Business Support Services,Exclude
+561510,Travel Agencies,Medium
+561520,Tour Operators,Medium
+561591,Convention and Visitors Bureaus,Exclude
+561599,All Other Travel Arrangement and Reservation Services,Exclude
+561611,Investigation and Personal Background Check Services,Exclude
+561612,Security Guards and Patrol Services,Exclude
+561613,Armored Car Services,Exclude
+561621,Security Systems Services (except Locksmiths),Exclude
+561622,Locksmiths,Medium
+561710,Exterminating and Pest Control Services,High
+561720,Janitorial Services,Medium
+561730,Landscaping Services,High
+561740,Carpet and Upholstery Cleaning Services,Medium
+561790,Other Services to Buildings and Dwellings,Medium
+561910,Packaging and Labeling Services,Exclude
+561920,Convention and Trade Show Organizers,Exclude
+561990,All Other Support Services,Exclude
+562111,Solid Waste Collection,Exclude
+562112,Hazardous Waste Collection,Exclude
+562119,Other Waste Collection,Exclude
+562211,Hazardous Waste Treatment and Disposal,Exclude
+562212,Solid Waste Landfill,Exclude
+562213,Solid Waste Combustors and Incinerators,Exclude
+562219,Other Nonhazardous Waste Treatment and Disposal,Exclude
+562910,Remediation Services,Exclude
+562920,Materials Recovery Facilities,Exclude
+562991,Septic Tank and Related Services,Exclude
+562998,All Other Miscellaneous Waste Management Services,Exclude
+611110,Elementary and Secondary Schools,Exclude
+611210,Junior Colleges,Low
+611310,"Colleges, Universities, and Professional Schools",Low
+611410,Business and Secretarial Schools,Low
+611420,Computer Training,Low
+611430,Professional and Management Development Training,Low
+611511,Cosmetology and Barber Schools,Low
+611512,Flight Training,Low
+611513,Apprenticeship Training,Low
+611519,Other Technical and Trade Schools,Low
+611610,Fine Arts Schools,Low
+611620,Sports and Recreation Instruction,Low
+611630,Language Schools,Low
+611691,Exam Preparation and Tutoring,Low
+611692,Automobile Driving Schools,Low
+611699,All Other Miscellaneous Schools and Instruction,Low
+611710,Educational Support Services,Exclude
+621111,Offices of Physicians (except Mental Health Specialists),Low
+621112,"Offices of Physicians, Mental Health Specialists",Low
+621210,Offices of Dentists,Low
+621310,Offices of Chiropractors,High
+621320,Offices of Optometrists,Medium
+621330,Offices of Mental Health Practitioners (except Physicians),Low
+621340,"Offices of Physical, Occupational and Speech Therapists, and Audiologists",Low
+621391,Offices of Podiatrists,Low
+621399,Offices of All Other Miscellaneous Health Practitioners,Low
+621410,Family Planning Centers,Medium
+621420,Outpatient Mental Health and Substance Abuse Centers,Exclude
+621491,HMO Medical Centers,Exclude
+621492,Kidney Dialysis Centers,Exclude
+621493,Freestanding Ambulatory Surgical and Emergency Centers,Exclude
+621498,All Other Outpatient Care Centers,Exclude
+621511,Medical Laboratories,Exclude
+621512,Diagnostic Imaging Centers,Exclude
+621610,Home Health Care Services,Exclude
+621910,Ambulance Services,Exclude
+621991,Blood and Organ Banks,Exclude
+621999,All Other Miscellaneous Ambulatory Health Care Services,Exclude
+622110,General Medical and Surgical Hospitals,Exclude
+622210,Psychiatric and Substance Abuse Hospitals,Exclude
+622310,Specialty (except Psychiatric and Substance Abuse) Hospitals,Exclude
+623110,Nursing Care Facilities (Skilled Nursing Facilities),Exclude
+623210,Residential Intellectual and Developmental Disability Facilities,Exclude
+623220,Residential Mental Health and Substance Abuse Facilities,Exclude
+623311,Continuing Care Retirement Communities,High
+623312,Assisted Living Facilities for the Elderly,High
+623990,Other Residential Care Facilities,Exclude
+624110,Child and Youth Services,Exclude
+624120,Services for the Elderly and Persons with Disabilities,Exclude
+624190,Other Individual and Family Services,Exclude
+624210,Community Food Services,Exclude
+624221,Temporary Shelters,Exclude
+624229,Other Community Housing Services,Exclude
+624230,Emergency and Other Relief Services,Exclude
+624310,Vocational Rehabilitation Services,Exclude
+624410,Child Care Services,Medium
+711110,Theater Companies and Dinner Theaters,Medium
+711120,Dance Companies,Medium
+711130,Musical Groups and Artists,Medium
+711190,Other Performing Arts Companies,Medium
+711211,Sports Teams and Clubs,Medium
+711212,Racetracks,Medium
+711219,Other Spectator Sports,Medium
+711310,"Promoters of Performing Arts, Sports, and Similar Events with Facilities",Low
+711320,"Promoters of Performing Arts, Sports, and Similar Events without Facilities",Low
+711410,"Agents and Managers for Artists, Athletes, Entertainers, and Other Public Figures",Low
+711510,"Independent Artists, Writers, and Performers",Exclude
+712110,Museums,Exclude
+712120,Historical Sites,Exclude
+712130,Zoos and Botanical Gardens,Exclude
+712190,Nature Parks and Other Similar Institutions,Exclude
+713110,Amusement and Theme Parks,Low
+713120,Amusement Arcades,Low
+713210,Casinos (except Casino Hotels),Exclude
+713290,Other Gambling Industries,Exclude
+713910,Golf Courses and Country Clubs,High
+713920,Skiing Facilities,Medium
+713930,Marinas,Low
+713940,Fitness and Recreational Sports Centers,High
+713950,Bowling Centers,High
+713990,All Other Amusement and Recreation Industries,High
+721110,Hotels (except Casino Hotels) and Motels,Low
+721120,Casino Hotels,Exclude
+721191,Bed-and-Breakfast Inns,Medium
+721199,All Other Traveler Accommodation,Medium
+721211,RV (Recreational Vehicle) Parks and Campgrounds,Medium
+721214,Recreational and Vacation Camps (except Campgrounds),Medium
+721310,"Rooming and Boarding Houses, Dormitories, and Workers' Camps",Exclude
+722310,Food Service Contractors,Exclude
+722320,Caterers,Medium
+722330,Mobile Food Services,High
+722410,Drinking Places (Alcoholic Beverages),High
+722511,Full-Service Restaurants,High
+722513,Limited-Service Restaurants,High
+722514,"Cafeterias, Grill Buffets, and Buffets",High
+722515,Snack and Nonalcoholic Beverage Bars,High
+811111,General Automotive Repair,High
+811114,Specialized Automotive Repair,High
+811121,"Automotive Body, Paint, and Interior Repair and Maintenance",High
+811122,Automotive Glass Replacement Shops,High
+811191,Automotive Oil Change and Lubrication Shops,High
+811192,Car Washes,High
+811198,All Other Automotive Repair and Maintenance,High
+811210,Electronic and Precision Equipment Repair and Maintenance,High
+811310,Commercial and Industrial Machinery and Equipment (except Automotive and Electronic) Repair and Maintenance,Exclude
+811411,Home and Garden Equipment Repair and Maintenance,High
+811412,Appliance Repair and Maintenance,High
+811420,Reupholstery and Furniture Repair,Medium
+811430,Footwear and Leather Goods Repair,Medium
+811490,Other Personal and Household Goods Repair and Maintenance,Medium
+812111,Barber Shops,Medium
+812112,Beauty Salons,High
+812113,Nail Salons,Medium
+812191,Diet and Weight Reducing Centers,High
+812199,Other Personal Care Services,High
+812210,Funeral Homes and Funeral Services,Medium
+812220,Cemeteries and Crematories,Exclude
+812310,Coin-Operated Laundries and Drycleaners,Exclude
+812320,Drycleaning and Laundry Services (except Coin-Operated),Exclude
+812331,Linen Supply,Exclude
+812332,Industrial Launderers,Exclude
+812910,Pet Care (except Veterinary) Services,Medium
+812921,Photofinishing Laboratories (except One-Hour),Low
+812922,One-Hour Photofinishing,Low
+812930,Parking Lots and Garages,Exclude
+812990,All Other Personal Services,Low
+813110,Religious Organizations,Exclude
+813211,Grantmaking Foundations,Exclude
+813212,Voluntary Health Organizations,Exclude
+813219,Other Grantmaking and Giving Services,Exclude
+813311,Human Rights Organizations,Exclude
+813312,"Environment, Conservation and Wildlife Organizations",Exclude
+813319,Other Social Advocacy Organizations,Exclude
+813410,Civic and Social Organizations,Exclude
+813910,Business Associations,Exclude
+813920,Professional Organizations,Exclude
+813930,Labor Unions and Similar Labor Organizations,Exclude
+813940,Political Organizations,Exclude
+813990,"Other Similar Organizations (except Business, Professional, Labor, and Political Organizations)",Exclude
+814110,Private Households,Exclude
+921110,Executive Offices,Exclude
+921120,Legislative Bodies,Exclude
+921130,Public Finance Activities,Exclude
+921140,"Executive and Legislative Offices, Combined",Exclude
+921150,American Indian and Alaska Native Tribal Governments,Exclude
+921190,Other General Government Support,Exclude
+922110,Courts,Exclude
+922120,Police Protection,Exclude
+922130,Legal Counsel and Prosecution,Exclude
+922140,Correctional Institutions,Exclude
+922150,Parole Offices and Probation Offices,Exclude
+922160,Fire Protection,Exclude
+922190,"Other Justice, Public Order, and Safety Activities",Exclude
+923110,Administration of Education Programs,Exclude
+923120,Administration of Public Health Programs,Exclude
+923130,"Administration of Human Resource Programs (except Education, Public Health, and Veterans' Affairs Programs)",Exclude
+923140,Administration of Veterans' Affairs,Exclude
+924110,Administration of Air and Water Resource and Solid Waste Management Programs,Exclude
+924120,Administration of Conservation Programs,Exclude
+925110,Administration of Housing Programs,Exclude
+925120,Administration of Urban Planning and Community and Rural Development,Exclude
+926110,Administration of General Economic Programs,Exclude
+926120,Regulation and Administration of Transportation Programs,Exclude
+926130,"Regulation and Administration of Communications, Electric, Gas, and Other Utilities",Exclude
+926140,Regulation of Agricultural Marketing and Commodities,Exclude
+926150,"Regulation, Licensing, and Inspection of Miscellaneous Commercial Sectors",Exclude
+927110,Space Research and Technology,Exclude
+928110,National Security,Exclude
+928120,International Affairs,Exclude
