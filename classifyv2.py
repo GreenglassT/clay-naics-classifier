@@ -24,53 +24,90 @@ OPENAI_API_KEY = os.getenv('OPENAI_API_KEY')
 ASSISTANT_ID = os.getenv('ASSISTANT_ID')
 SERPAPI_KEY = os.getenv('SERPAPI_KEY')
 
+import json
+import os
+
 class ICPManager:
-    def __init__(self, csv_path: str = "icp_naics_codes.csv"):
-        self.csv_path = csv_path
+    def __init__(self, json_path: str = "icp_naics_codes.json"):
+        self.json_path = json_path
         self.icp_data = {}
+        self.metadata = {}
         self.load_icp_data()
     
     def load_icp_data(self):
-        """Load ICP data from simplified CSV file"""
+        """Load ICP data from JSON file"""
         try:
-            if os.path.exists(self.csv_path):
-                with open(self.csv_path, 'r', newline='', encoding='utf-8') as csvfile:
-                    reader = csv.DictReader(csvfile)
+            if os.path.exists(self.json_path):
+                with open(self.json_path, 'r', encoding='utf-8') as jsonfile:
+                    config = json.load(jsonfile)
                     
-                    for row in reader:
-                        naics_code = str(row['naics_code']).strip()
-                        self.icp_data[naics_code] = {
-                            'title': row['naics_title'].strip(),
-                            'priority': row['priority'].strip()
+                    # Load metadata
+                    self.metadata = config.get('metadata', {})
+                    
+                    # Load NAICS codes
+                    naics_codes = config.get('naics_codes', {})
+                    for code, info in naics_codes.items():
+                        self.icp_data[str(code)] = {
+                            'title': info.get('title', ''),
+                            'priority': info.get('priority', 'Unknown')
                         }
                 
-                logger.info(f"Loaded {len(self.icp_data)} NAICS codes from {self.csv_path}")
+                logger.info(f"Loaded {len(self.icp_data)} NAICS codes from {self.json_path}")
+                logger.info(f"Priority distribution: {self.metadata.get('priority_distribution', {})}")
             else:
-                logger.warning(f"ICP CSV file not found: {self.csv_path}")
-                self.create_sample_csv()
+                logger.warning(f"ICP JSON file not found: {self.json_path}")
+                self.create_sample_json()
         except Exception as e:
             logger.error(f"Error loading ICP data: {e}")
             self.icp_data = {}
     
-    def create_sample_csv(self):
-        """Create a sample CSV file if none exists"""
-        sample_data = [
-            ['naics_code', 'naics_title', 'priority'],
-            ['541511', 'Custom Computer Programming Services', 'High'],
-            ['541512', 'Computer Systems Design Services', 'High'],
-            ['621111', 'Offices of Physicians', 'Medium'],
-            ['722513', 'Limited-Service Restaurants', 'Exclude'],
-        ]
+    def create_sample_json(self):
+        """Create a sample JSON file if none exists"""
+        sample_config = {
+            "metadata": {
+                "description": "ICP NAICS Codes Configuration",
+                "total_codes": 4,
+                "last_updated": "2025-01-27",
+                "priority_distribution": {
+                    "High": 2,
+                    "Medium": 1,
+                    "Exclude": 1
+                }
+            },
+            "priority_definitions": {
+                "High": "Primary target customers",
+                "Medium": "Secondary targets",
+                "Low": "Marginal prospects",
+                "Exclude": "Do not target"
+            },
+            "naics_codes": {
+                "541511": {
+                    "title": "Custom Computer Programming Services",
+                    "priority": "High"
+                },
+                "541512": {
+                    "title": "Computer Systems Design Services",
+                    "priority": "High"
+                },
+                "621111": {
+                    "title": "Offices of Physicians",
+                    "priority": "Medium"
+                },
+                "722513": {
+                    "title": "Limited-Service Restaurants",
+                    "priority": "Exclude"
+                }
+            }
+        }
         
         try:
-            with open(self.csv_path, 'w', newline='', encoding='utf-8') as csvfile:
-                writer = csv.writer(csvfile)
-                writer.writerows(sample_data)
+            with open(self.json_path, 'w', encoding='utf-8') as jsonfile:
+                json.dump(sample_config, jsonfile, indent=2)
             
-            logger.info(f"Created sample ICP CSV file: {self.csv_path}")
+            logger.info(f"Created sample ICP JSON file: {self.json_path}")
             self.load_icp_data()  # Reload the data
         except Exception as e:
-            logger.error(f"Error creating sample CSV: {e}")
+            logger.error(f"Error creating sample JSON: {e}")
     
     def get_qualification(self, naics_code: str, naics_title: str = "") -> dict:
         """Get ICP qualification for a NAICS code"""
@@ -113,7 +150,7 @@ class ICPManager:
                         })
                         return qualification
         
-        # Keyword matching in title as fallback
+        # Keyword matching fallback
         if naics_title and naics_title != "Not determined":
             title_lower = naics_title.lower()
             keyword_priorities = {
@@ -146,18 +183,67 @@ class ICPManager:
     def get_stats(self) -> dict:
         """Get statistics about ICP configuration"""
         if not self.icp_data:
-            return {'total': 0, 'by_priority': {}}
+            return {'total': 0, 'by_priority': {}, 'metadata': self.metadata}
         
-        stats = {'total': len(self.icp_data), 'by_priority': {}}
+        stats = {
+            'total': len(self.icp_data),
+            'by_priority': {},
+            'metadata': self.metadata
+        }
         
         for code_info in self.icp_data.values():
             priority = code_info['priority']
             stats['by_priority'][priority] = stats['by_priority'].get(priority, 0) + 1
         
         return stats
+    
+    def add_code(self, naics_code: str, title: str, priority: str):
+        """Add or update a NAICS code"""
+        self.icp_data[naics_code] = {
+            'title': title,
+            'priority': priority
+        }
+        self.save_config()
+    
+    def remove_code(self, naics_code: str):
+        """Remove a NAICS code"""
+        if naics_code in self.icp_data:
+            del self.icp_data[naics_code]
+            self.save_config()
+    
+    def save_config(self):
+        """Save current configuration to JSON file"""
+        # Update metadata
+        priority_counts = {}
+        for code_info in self.icp_data.values():
+            priority = code_info['priority']
+            priority_counts[priority] = priority_counts.get(priority, 0) + 1
+        
+        config = {
+            "metadata": {
+                "description": "ICP NAICS Codes Configuration",
+                "total_codes": len(self.icp_data),
+                "last_updated": "2025-01-27",
+                "priority_distribution": priority_counts
+            },
+            "priority_definitions": {
+                "High": "Primary target customers",
+                "Medium": "Secondary targets",
+                "Low": "Marginal prospects",
+                "Exclude": "Do not target"
+            },
+            "naics_codes": self.icp_data
+        }
+        
+        try:
+            with open(self.json_path, 'w', encoding='utf-8') as jsonfile:
+                json.dump(config, jsonfile, indent=2)
+            logger.info(f"Saved ICP configuration to {self.json_path}")
+        except Exception as e:
+            logger.error(f"Error saving ICP config: {e}")
 
 # Initialize ICP Manager globally
-icp_manager = ICPManager("/Users/trent/OpenAI Webhook/icp_naics_codes.csv")
+icp_manager = ICPManager("/Users/trent/OpenAI Webhook/icp_naics_codes.json")
 
 # NEW: Update the qualify_against_icp function
 def qualify_against_icp(naics_code, naics_title):
@@ -691,6 +777,49 @@ def search_icp_codes():
         'keyword': keyword,
         'matches': matches,
         'count': len(matches)
+    })
+    
+@app.route('/icp-add', methods=['POST'])
+def add_icp_code():
+    """Add or update a NAICS code"""
+    data = request.json
+    naics_code = data.get('naics_code')
+    title = data.get('title')
+    priority = data.get('priority')
+    
+    if not all([naics_code, title, priority]):
+        return jsonify({'error': 'naics_code, title, and priority required'}), 400
+    
+    if priority not in ['High', 'Medium', 'Low', 'Exclude']:
+        return jsonify({'error': 'priority must be High, Medium, Low, or Exclude'}), 400
+    
+    icp_manager.add_code(naics_code, title, priority)
+    
+    return jsonify({
+        'success': True,
+        'message': f'Added/updated NAICS code {naics_code}',
+        'code': naics_code,
+        'title': title,
+        'priority': priority
+    })
+
+@app.route('/icp-remove', methods=['POST'])
+def remove_icp_code():
+    """Remove a NAICS code"""
+    data = request.json
+    naics_code = data.get('naics_code')
+    
+    if not naics_code:
+        return jsonify({'error': 'naics_code required'}), 400
+    
+    if naics_code not in icp_manager.icp_data:
+        return jsonify({'error': f'NAICS code {naics_code} not found'}), 404
+    
+    icp_manager.remove_code(naics_code)
+    
+    return jsonify({
+        'success': True,
+        'message': f'Removed NAICS code {naics_code}'
     })
 
 @app.route('/endpoints', methods=['GET'])
